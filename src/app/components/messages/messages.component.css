@@ -1,19 +1,39 @@
 /* MessagesComponent's private CSS styles */
+* {
+  margin: var(--space-sm);
+}
+
 h2 {
-    color: #A80000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-  }
-  
+  color: #000044;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.clear {
+  color: #333;
+  background-color: #eee;
+  margin-bottom: var(--space-sm);
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clear:hover {
+  color: white;
+  background-color: hsla(var(--secondary), 0.8);
+}
+
+#message {
+  margin-left: var(--space-md);
+}
+
+@media (max-width:600px) {
   .clear {
-    color: #333;
-    background-color: #eee;
-    margin-bottom: 12px;
-    padding: 1rem;
-    border-radius: 4px;
-    font-size: 1rem;
+    margin-top: -(var(--space-xs));
   }
-  .clear:hover {
-    color: white;
-    background-color: #42545C;
-  }
+}

@@ -1,25 +1,108 @@
 /* HeroDetailComponent's private CSS styles */
+.hero-detail-outer {
+  width: fit-content;
+  border-style: solid;
+  padding: var(--space-lg);
+  margin: var(--space-sm) auto;
+
+  border-color: hsla(var(--border), 0.8);
+  background-color: hsla(var(--secondary), 0.2);
+}
+
+h2 {
+  color: hsl(var(--text-primary));
+  font-size: var(--text-lg);
+
+  background-color: hsla(var(--secondary), 0.1);
+  padding: 0 var(--space-sm);
+}
+
+.hero-detail-id {
+  font-weight: bold;
+  font-size: var(--text-md);
+  
+  padding-top: var(--space-sm);
+  padding-left: var(--space-sm);
+}
+
+span {
+  color: hsl(var(--text-primary), 0.8);
+}
+
+.hero-detail-inner {
+  padding: 0 var(--space-sm) var(--space-sm);
+}
+
 label {
-    color: #435960;
+  font-weight: bold;
+  font-size: var(--text-md);
+  color: hsl(var(--text-primary), 0.8);
+}
+
+input {
+  font-size: 12pt;
+  padding: var(--space-xs);
+}
+
+button {
+  margin-top: 20px;
+  margin-right: var(--space-xs);
+  background-color: hsl(var(--secondary), 0.1);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+}
+
+#save {
+  margin-left: var(--space-xs);
+  padding: var(--space-xs);
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+@media (max-width: 600px) {
+  .hero-detail-outer {
+    padding: var(--space-sm);
+    margin: var(--space-sm);
+  }
+
+  h2 {
+    font-size: var(--text-md);
+  }
+
+  .hero-detail-id {
     font-weight: bold;
+    font-size: 12pt;
+    
+    padding-top: var(--space-xs);
+    padding-left: var(--space-xs);
   }
+  
+  .hero-detail-inner {
+    padding: 0 var(--space-xs) var(--space-xs);
+  }
+
   input {
-    font-size: 1em;
-    padding: .5rem;
+    font-size: var(--text-sm);
+    padding: var(--space-xs);
   }
+  
   button {
-    margin-top: 20px;
-    margin-right: .5rem;
-    background-color: #eee;
-    padding: 1rem;
-    border-radius: 4px;
+    margin-right: var(--space-xs);
+    padding: var(--space-xs);
+    border-radius: var(--radius-sm);
     font-size: 1rem;
   }
-  button:hover {
-    background-color: #cfd8dc;
+  
+  #save {
+    margin-left: var(--space-xs);
+    padding: var(--space-xs);
   }
-  button:disabled {
-    background-color: #eee;
-    color: #ccc;
-    cursor: auto;
-  }
+}

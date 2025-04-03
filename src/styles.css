@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: 0, 0%, 100%;
+  --secondary: 0, 0%, 0%;
+
+  --border: 0, 0%, 0%;
+  --radius-xs: 0.1rem;
+  --radius-sm: 0.2rem;
+  --radius-md: 0.3rem;
+
+  --text-primary: 0, 0%, 0%;
+  --text-secondary: 0, 0%, 100%;
+  --text-sm: 10pt;
+  --text-md: 15pt;
+  --text-lg: 25pt;
+  --text-xl: 40pt;
+  --text-xxl:50pt;
+  --text-xxxl: 70pt;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+
+  --height-lg: 15rem;
+  --height-md: 10rem;
+  --height-sm: 4rem;
+
+  --width-sm: 15rem;
+  --width-md: 8rem;
+  --width-lg: 40rem;
+
+}
+
+* {
+  margin: 0;
+  font-family: monospace, sans-serif;
+  color: hsl(var(--text-primary));
+
+  background-color: hsl(var(--primary));
+}

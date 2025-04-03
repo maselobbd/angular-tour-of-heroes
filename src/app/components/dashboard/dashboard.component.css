@@ -2,44 +2,32 @@
 
 h2 {
     text-align: center;
+    font-size: var(--text-xl);
   }
   
   .heroes-menu {
     padding: 0;
-    margin: auto;
-    max-width: 1000px;
+    margin: var(--space-sm) var(--space-sm);
+    max-width: 100%;
+    align-items: center;
   
-    /* flexbox */
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
   }
   
   a {
-    background-color: #3f525c;
-    border-radius: 2px;
-    padding: 1rem;
-    font-size: 1.2rem;
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
     text-align: center;
+    text-decoration: none;
+    font-size: var(--text-md);
+    color: hsl(var(--text-secondary));
+    padding: var(--space-sm) var(--space-xs);
+    
     width: 100%;
-    min-width: 70px;
-    margin: .5rem auto;
-    box-sizing: border-box;
+    border-radius: var(--radius-xs);
+    background-color: hsla(var(--secondary), 0.7);
+    margin: var(--space-xs) auto;
   
-    /* flexbox */
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
   }
   
   @media (min-width: 600px) {
