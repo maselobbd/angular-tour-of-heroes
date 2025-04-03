@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 import { of } from 'rxjs';
 
 import { HeroDetailComponent } from './hero-detail.component';
-import { HeroService } from '../hero.service';
+import { HeroService } from '../../services/hero-service/hero.service';
 
 describe('HeroDetailComponent', () => {
   let component: HeroDetailComponent;
@@ -21,15 +21,15 @@ describe('HeroDetailComponent', () => {
       imports: [FormsModule],
       declarations: [HeroDetailComponent],
       providers: [
-        { provide: ActivatedRoute, 
+        {
+          provide: ActivatedRoute,
           useValue: { snapshot: { paramMap: convertToParamMap({ id: '1' }) } },
         },
         { provide: HeroService, useValue: mockHeroService },
-        { provide: Location, useValue: mockLocation }
-      ]
-    })
-    .compileComponents();
-    
+        { provide: Location, useValue: mockLocation },
+      ],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(HeroDetailComponent);
     component = fixture.componentInstance;
     mockHeroService.getHero.and.returnValue(of({ id: 1, name: 'Superman' }));
@@ -42,11 +42,10 @@ describe('HeroDetailComponent', () => {
   });
 
   it('should display the hero name in an input field', () => {
-    component.hero = { id: 1, name: 'Superman' }; 
-    fixture.detectChanges(); 
-  
+    component.hero = { id: 1, name: 'Superman' };
+    fixture.detectChanges();
+
     const input = fixture.nativeElement.querySelector('input');
     expect(input.value).toBe('Superman');
   });
-  
 });

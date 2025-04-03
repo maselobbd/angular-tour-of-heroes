@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeroesComponent } from './heroes.component';
-import { HeroService } from '../hero.service';
+import { HeroService } from '../../services/hero-service/hero.service';
 import { of } from 'rxjs';
 import { RouterModule } from '@angular/router';
 
@@ -15,15 +15,14 @@ describe('HeroesComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [HeroesComponent],
       imports: [RouterModule.forRoot([])],
-      providers: [
-        { provide: HeroService, useValue: mockHeroService }
-      ]
-    })
-    .compileComponents();
-    
+      providers: [{ provide: HeroService, useValue: mockHeroService }],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(HeroesComponent);
     component = fixture.componentInstance;
-    mockHeroService.getHeroes.and.returnValue(of([{ id: 1, name: 'Superman' }]));
+    mockHeroService.getHeroes.and.returnValue(
+      of([{ id: 1, name: 'Superman' }])
+    );
 
     fixture.detectChanges();
   });
