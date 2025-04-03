@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 
-import { Hero } from './hero';
-import { MessageService } from './message.service';
+import { Hero } from '../../models/hero';
+import { MessageService } from '../messages/message.service';
 
 @Injectable({ providedIn: 'root' })
 export class HeroService {
